@@ -1,6 +1,14 @@
 <h1>Productos en Tiempo Real</h1>
+
+<!-- Barra de búsqueda -->
+<div class="search-bar">
+  <input type="text" id="searchProduct" placeholder="Buscar productos..." oninput="searchProduct()">
+</div>
+
+<!-- Lista de productos -->
 <ul id="productList"></ul>
 
+<!-- Formulario para agregar productos -->
 <h2>Agregar Producto</h2>
 <form id="addProductForm">
   <input type="text" id="productName" placeholder="Nombre del producto" required>
@@ -8,11 +16,19 @@
   <button type="submit">Agregar</button>
 </form>
 
+<!-- Formulario para eliminar productos -->
 <h2>Eliminar Producto</h2>
 <form id="deleteProductForm">
   <input type="text" id="deleteProductName" placeholder="Nombre del producto" required>
   <button type="submit">Eliminar</button>
 </form>
+
+<!-- Carrito de compras -->
+<div class="cart">
+  <h3>Carrito de Compras</h3>
+  <ul id="cartList"></ul>
+  <button id="checkoutBtn">Realizar Compra</button>
+</div>
 
 <script src="/socket.io/socket.io.js"></script>
 <script src="/socket.js"></script>
